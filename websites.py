@@ -75,6 +75,6 @@ y_pred = tree.predict(X_test)
 print('FOREST LIMITED FEATURES:')
 print(classification_report(y_test,y_pred))
 
-print(cross_val_score(tree,X,y))
+print(np.mean(cross_val_score(tree,X,y,cv=10)))
 
 #%%
